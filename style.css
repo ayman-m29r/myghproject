@@ -1,0 +1,489 @@
+/* font-family: 'Josefin Sans', sans-serif;
+font-family: 'Montserrat', sans-serif; */
+
+/* navbar */
+/* sidebar */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sidebar {
+    width: 8rem;
+    background-color: #e4e3e3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+}
+
+.menu-icon {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.line {
+    content: "";
+    width: 2.5rem;
+    height: .2rem;
+    background-color: #000;
+    margin-bottom: .4rem;
+}
+
+.line-1,
+.line-3 {
+    width: 1.6rem;
+    transition: all .4s;
+}
+
+.menu-icon:hover .line-1,
+.menu-icon:hover .line-3 {
+    width: 2.5rem;
+}
+
+.social-icons {
+    padding: 0;
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.social-icons li {
+    list-style: none;
+}
+
+.icon-1 {
+    color: #5374BD;
+}
+
+.icon-2 {
+    color: #1DA1F2;
+}
+
+.icon-3 {
+    color: #FF0000;
+}
+
+.icon-4 {
+    color: #CF453A;
+}
+
+/* end of sidebar */
+/* navbar */
+
+.navigation {
+    position: fixed;
+    left: -30rem;
+    width: 30rem;
+    height: 100%;
+    margin-left: 8rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, .6)), url('images/nav-bg.jpeg') center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .8s cubic-bezier(1, 0, 0, 1);
+    z-index: 5;
+}
+
+.nav-header {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.nav-heading {
+    color: #e9b935;
+    font-size: 2.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+}
+
+.nav-form {
+    position: relative;
+}
+
+.nav-search {
+    background-color: #222;
+    width: 20rem;
+    color: #999;
+    font-family: 'Josefin sans', sans-serif;
+    font-size: 1.6rem;
+    border: 1px solid #888;
+    border-radius: 10rem;
+    outline: none;
+    padding: .5rem 1rem;
+    transition: all .2s;
+    letter-spacing: .1rem;
+}
+
+.nav-search:focus {
+    color: #e9b935;
+    background-color: #333;
+}
+
+.search-btn {
+    position: absolute;
+    top: .7rem;
+    background: none;
+    border: none;
+    color: #e9b935;
+    right: .6rem;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    height: 20rem;
+}
+
+.list-item {
+    list-style: none;
+    position: relative;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.6rem;
+    font-family: 'josefin sans', sans-serif;
+    transition: color .2s;
+}
+
+.nav-link::before {
+    content: "";
+    width: 0;
+    height: .1rem;
+    background-color: #e9b935;
+    position: absolute;
+    top: .7rem;
+    left: -4.5rem;
+    transition: width .5s cubic-bezier(1, 0, 0, 1);
+}
+
+.nav-link::after {
+    content: "";
+    width: 0;
+    height: .1rem;
+    background-color: #e9b935;
+    position: absolute;
+    top: .7rem;
+    right: -4.5rem;
+    transition: width .5s cubic-bezier(1, 0, 0, 1);
+}
+
+.nav-link:hover {
+    color: #e9b935;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+    width: 3.5rem;
+}
+
+.nav-footer {
+    color: #fff;
+}
+
+
+.checkbox:checked~.sidebar .line-1 {
+    transform: rotate(-405deg) translate(-5px, 4px);
+    width: 2.5rem;
+}
+
+.checkbox:checked~.sidebar .line-2 {
+    opacity: 0;
+}
+
+.checkbox:checked~.sidebar .line-3 {
+    transform: rotate(405deg) translate(-5px, -4px);
+    width: 2.5rem;
+}
+
+.checkbox:checked~.navigation {
+    left: 0;
+}
+
+/* end of navbar */
+/* end of navbar */
+
+/* header  */
+
+.header {
+    margin-left: 8rem;
+    height: 100vh;
+    background: linear-gradient(to top, rgba(0, 0, 0, .6), rgba(0, 0, 0, .5)), url('images/header-1.jpeg') center no-repeat;
+    background-size: cover;
+}
+
+.brand {
+    display: flex;
+    font-size: 2.5rem;
+    color: #e9b935;
+    font-family: 'josefin sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: .1rem;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    height: 30rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-heading {
+    color: #fff;
+    font-size: 7rem;
+    margin-bottom: 0;
+    font-family: 'josefin sans', sans-serif;
+    font-weight: 300;
+    animation: anim 2s;
+}
+
+.banner-paragraph {
+    color: #fff;
+    font-size: 3.5rem;
+    margin-top: .5rem;
+    animation: anim 1.5s .5s backwards;
+}
+
+.banner-btn {
+    width: 15rem;
+    border: none;
+    outline: none;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    border-radius: 10rem;
+    background: linear-gradient(to right, gold, goldenrod);
+    animation: anim 1s 1s backwards;
+    cursor: pointer;
+}
+
+.banner-btn:hover {
+    background: linear-gradient(to left, gold, goldenrod);
+}
+
+.banner-btn:active {
+    transform: translateY(.2rem);
+}
+
+@keyframes anim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* end of header  */
+
+/* about us */
+.about-us {
+    margin-left: 8rem;
+    display: flex;
+    background-color: #d3d3d3;
+}
+
+.about-us-heading {
+    flex: 0 1 50%;
+    padding: 10rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.abt-us-header {
+    font-size: 4rem;
+    font-family: 'josefin sans', sans-serif;
+    color: #ac810c;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.about-us-para {
+    font-size: 1.6rem;
+    font-style: italic;
+    word-spacing: .1rem;
+}
+
+.about-us-btn {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: #ad830f;
+    padding: .6rem 1rem;
+    border: .1rem solid #bb9019;
+    outline: none;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 3rem;
+}
+
+.btn-arrow {
+    margin-left: .4rem;
+    transition: all .3s;
+}
+
+.about-us-btn:hover .btn-arrow {
+    margin-left: .7rem;
+}
+
+.about-us-images {
+    flex: 1 1;
+    position: relative;
+}
+
+.img {
+    position: absolute;
+    width: 32rem;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0 .5rem 1rem #777;
+    border: .2rem solid #ad830f;
+    border-radius: .5rem;
+}
+
+.img-1 {
+    transform: translate(-20%, -90%);
+}
+
+.img-2 {
+    transform: translate(-70%, -70%);
+}
+
+.img-3 {
+    transform: translate(-50%, -50%);
+}
+
+.img-4 {
+    transform: translate(-30%, -30%);
+}
+
+/* end of about us */
+
+/* common styles */
+
+.common-heading {
+    text-align: center;
+}
+
+.common-header {
+    font-family: 'josefin sans', sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #e9b935;
+    margin-bottom: 1rem;
+}
+
+.underline-sm {
+    width: 9rem;
+    height: .2rem;
+    background-color: #e9b935;
+    margin: 0 auto .5rem auto;
+}
+
+.underline-lg {
+    width: 20rem;
+    height: .2rem;
+    background-color: #e9b935;
+    margin: 0 auto 0 auto;
+}
+
+/* end of common styles */
+
+/* rooms */
+.rooms {
+    margin-left: 8rem;
+}
+
+.room-cards-wrapper {
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.room-card {
+    width: 55rem;
+    margin: 0 4rem 4rem 0;
+    background-color: #222;
+    box-shadow: 0 .5rem 1rem #888;
+}
+
+.rm-img {
+    width: 100%;
+}
+
+.rm-card-banner {
+    padding: 2.5rem;
+    box-sizing: border-box;
+}
+
+.rm-heading {
+    font-size: 4rem;
+    color: #e9b935;
+    font-family: 'josefin sans', sans-serif;
+    font-weight: 300;
+    margin: 0;
+}
+
+.rm-para {
+    font-size: 1.2rem;
+    color: #d3d3d3;
+    margin: 0;
+}
+
+.rm-price {
+    text-align: right;
+    font-size: 6rem;
+    color: #e9b935;
+    font-weight: 300;
+    margin: 0;
+}
+
+.rm-btn {
+    padding: 1rem 2rem;
+    border: .1rem solid #e9b935;
+    outline: none;
+    background: transparent;
+    color: #e9b935;
+    font-size: 2rem;
+    border-radius: 10rem;
+    cursor: pointer;
+}
+
+.rm-all {
+    padding: 1rem 2rem;
+    border: .1rem solid #e9b935;
+    outline: none;
+    background: transparent;
+    color: #e9b935;
+    font-size: 2rem;
+    border-radius: 10rem;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.rm-all:hover {
+    color: #fff;
+    background-color: #e9b935;
+}
+
+/* end of rooms */
